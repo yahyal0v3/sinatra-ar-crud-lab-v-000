@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
 
   get '/posts/new' do
     erb :new
-    redirect to '/posts'
+    
   end
 
   post '/posts' do
