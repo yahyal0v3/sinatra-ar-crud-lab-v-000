@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <form action="/posts/<% @post.id %>" method="post">
-      <input id="hidden" type="hidden" name="_method" value="patch">
-      Blog Title: <input type="text" name="name" value="<%= @post.name %>">
-      </br></br>
-      <textarea name="content"><%= @post.content %></textarea>
-      <input type="submit" value="submit">
-    </form>
-  </body>
-</html>
+<h1>Edit Your Blog Post!</h1>
+
+ <form method="post" action="/posts/<%= @post.id %>">
+
+   <input id="hidden" type="hidden" name="_method" value="patch">
+   Post Title: <input type="text" value="<%=@post.name%>" name="name">
+   Post Text: <input type="text" value="<%=@post.content%>" name="content">
+   <input type="submit" value="submit">
+ </form>
